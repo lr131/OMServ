@@ -1,7 +1,41 @@
 {% extends "base.html" %}
 {% block content %}
-    <h1>Hi, {{user.nickname}}!</h1>
-    {% for post in posts %}
-        <div><p>{{post.author.nickname}} says: <b>{{post.body}}</b></p></div>
-    {% endfor %}
+    <a class="list-group-item" style="display: inline-block;">   
+    <div class="col-sm-6"> <strong> address : </strong> </div>
+    <div class="col-sm-6"><strong> bdate :  </strong> {{ data.bdate}} </div> 
+    <div class="col-sm-6"><strong>block :</strong> </div> 
+    <div class="col-sm-6"><strong>byear :</strong> </div> 
+    <div class="col-sm-6"><strong>doc_num :</strong> </div> 
+    <div class="col-sm-6"><strong>doc_ser :</strong> </div>  
+    <div class="col-sm-6"><strong>dog_date :</strong> </div> 
+    <div class="col-sm-6"><strong>family :  </strong> {{ data.family }} </div> 
+    <div class="col-sm-6"><strong>flat :</strong> </div>     
+    <div class="col-sm-6"><strong>house :</strong> </div> 
+    <div class="col-sm-6"><strong>kladr :</strong> </div>  
+    <div class="col-sm-6"><strong>kodfil :</strong> </div>    
+    <div class="col-sm-6"><strong>name :  </strong> {{ data.name }} </div> 
+    <div class="col-sm-6"><strong>nameassure :</strong>  </div>      
+    <div class="col-sm-6"><strong>patr :  </strong> {{ data.patr }} </div> 
+    <div class="col-sm-6"><strong>pol_comp_code : </strong> </div> 
+    <div class="col-sm-6"><strong>pol_dog : </strong> </div>        
+    <div class="col-sm-6"><strong>pol_issue_date :</strong> </div>          
+    <div class="col-sm-6"><strong>pol_lpu_code :</strong> </div>  
+    <div class="col-sm-6"><strong>pol_num :  </strong> {{ data.pol_num }} </div>  
+    <div class="col-sm-6"><strong>pol_ser :</strong> </div>            
+    <div class="col-sm-6"><strong>policy :  </strong> {{ data.policy }} </div> 
+    <div class="col-sm-6"><strong>snils :  </strong> {{ data.snils }} </div>   
+    <div class="col-sm-6"><strong>soc_code :</strong> </div>        
+    <div class="col-sm-6"><strong>uslovno :</strong> </div>                
+</a>
+{% if ok == 1 %}
+<div class="panel panel-success">
+    <div class="panel-heading">OK = {{ ok }} </div>
+    <div class="panel-body"> {{ msg }} </div>
+</div>
+{% else %}
+<div class="panel panel-danger">
+    <div class="panel-heading">OK= {{ ok }}</div>
+    <div class="panel-body"> {{ msg }}  </div>
+</div>
+{% endif %}
 {% endblock %}

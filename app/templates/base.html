@@ -1,10 +1,6 @@
 <html>
   <head>
     <link href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="{{ url_for('static', filename='jquery.min.js') }}"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>
     {% if title %}
         <title>{{title}} - microblog</title>
     {% else %}
@@ -16,7 +12,7 @@
         <div class="container-fluid">
             <div class="col-md-6 col-md-offset-1">
                 <div class="navbar-header">
-                    <div>Microblog: <a href="/index">Home</a></div>
+                    <div class="navbar-brand"> Microblog: <a  href="/index"> Home </a></div>
                 </div>
             </div>
         </div>
@@ -29,4 +25,8 @@
         </div>
     </div>
   </body>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="{{ url_for('static', filename='jquery.min.js') }}"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>
 </html>
