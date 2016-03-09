@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <link href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="{{ url_for('static', filename='jquery.min.js') }}"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>
+    {% if title %}
+        <title>{{title}} - microblog</title>
+    {% else %}
+        <title>microblog</title>
+    {% endif %}
+  </head>
+  <body>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="col-md-6 col-md-offset-1">
+                <div class="navbar-header">
+                    <div>Microblog: <a href="/index">Home</a></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-9 col-md-offset-1">
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
